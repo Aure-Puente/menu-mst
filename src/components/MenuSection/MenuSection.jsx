@@ -1,6 +1,7 @@
 //Importaciones:
 import { Box, Typography } from "@mui/material";
 import ProductCard from "../ProductCard/ProductCard";
+import AutoAwesomeRoundedIcon from "@mui/icons-material/AutoAwesomeRounded";
 import "./MenuSection.css";
 
 //JSX:
@@ -22,16 +23,22 @@ function MenuSection({ category }) {
                 {category.title}
             </Typography>
 
-            <Typography
-                sx={{
-                mt: 0.5,
-                fontSize: "0.92rem",
-                color: "var(--muted-text)",
-                lineHeight: 1.35,
-                }}
-            >
-                {category.description}
-            </Typography>
+            {category.description && (
+                <Box className="section-note">
+                <AutoAwesomeRoundedIcon sx={{ fontSize: 16 }} />
+                
+                <Typography
+                    sx={{
+                    fontSize: "0.88rem",
+                    color: "var(--primary-dark)",
+                    fontWeight: 700,
+                    lineHeight: 1.35,
+                    }}
+                >
+                    {category.description}
+                </Typography>
+                </Box>
+            )}
             </Box>
         </Box>
 

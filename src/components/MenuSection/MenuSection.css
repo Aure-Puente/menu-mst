@@ -10,6 +10,41 @@
     padding: 0 2px;
     }
 
+    .section-header h3 {
+    position: relative;
+    width: fit-content;
+    }
+
+    .section-header h3::after {
+    content: "";
+    display: block;
+    width: 42px;
+    height: 3px;
+    margin-top: 6px;
+    border-radius: 999px;
+    background: rgba(217, 164, 65, 0.45);
+    }
+
+    .section-note {
+    width: fit-content;
+    max-width: 100%;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 6px;
+    margin-top: 8px;
+    padding: 6px 9px;
+    border-radius: 14px;
+    color: var(--primary-dark);
+    background: rgba(217, 164, 65, 0.12);
+    border: 1px solid rgba(217, 164, 65, 0.24);
+    }
+
+    .section-note svg {
+    flex-shrink: 0;
+    margin-top: 1px;
+    color: var(--primary);
+    }
+
     .products-list {
     display: flex;
     flex-direction: column;
