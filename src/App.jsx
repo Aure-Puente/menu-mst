@@ -1,12 +1,30 @@
 //App:
+import { useState } from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
 import CategoryNav from "./components/CategoryNav/CategoryNav";
-import MenuSection from "./components/MenuSection/MenuSection";
+import MenuGroup from "./components/MenuGroup/MenuGroup";
 import WhatsAppButton from "./components/WhatsAppButton/WhatsAppButton";
-import { menuData } from "./data/menuData";
+import { menuGroups } from "./data/menuData";
 
 function App() {
+  const [expandedGroup, setExpandedGroup] = useState(false);
+
+  const handleSelectGroup = (groupId) => {
+    setExpandedGroup(groupId);
+
+    setTimeout(() => {
+      const group = document.getElementById(groupId);
+
+      if (group) {
+        group.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }, 80);
+  };
+
   return (
     <main className="app">
       <Header />
@@ -22,11 +40,18 @@ function App() {
         </p>
       </section>
 
-      <CategoryNav categories={menuData} />
+      <CategoryNav groups={menuGroups} onSelectGroup={handleSelectGroup} />
 
       <section className="menu-content">
-        {menuData.map((category) => (
-          <MenuSection key={category.id} category={category} />
+        {menuGroups.map((group) => (
+          <MenuGroup
+            key={group.id}
+            group={group}
+            expanded={expandedGroup === group.id}
+            onChange={() =>
+              setExpandedGroup(expandedGroup === group.id ? false : group.id)
+            }
+          />
         ))}
       </section>
 

@@ -1,0 +1,73 @@
+    .menu-group {
+    scroll-margin-top: 82px;
+    border-radius: 28px !important;
+    background: rgba(255, 255, 255, 0.72) !important;
+    border: 1px solid var(--border);
+    box-shadow: 0 14px 38px rgba(70, 45, 20, 0.07);
+    overflow: hidden;
+    }
+
+    .menu-group::before {
+    display: none;
+    }
+
+    .menu-group-summary {
+    min-height: auto !important;
+    padding: 14px !important;
+    }
+
+    .menu-group-summary .MuiAccordionSummary-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 !important;
+    }
+
+    .menu-group-icon {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 16px;
+    color: var(--primary);
+    background: var(--soft);
+    }
+
+    .menu-group-text {
+    flex: 1;
+    min-width: 0;
+    }
+
+    .menu-group-chevron {
+    color: var(--primary);
+    }
+
+    .menu-group-details {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 4px 16px 18px !important;
+    background:
+        linear-gradient(
+        180deg,
+        rgba(255, 250, 243, 0.35),
+        rgba(255, 255, 255, 0.5)
+        );
+    }
+
+    @media (max-width: 360px) {
+    .menu-group-summary {
+        padding: 14px !important;
+    }
+
+    .menu-group-details {
+        padding: 4px 14px 16px !important;
+    }
+
+    .menu-group-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 14px;
+    }
+    }

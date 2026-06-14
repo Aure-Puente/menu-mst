@@ -7,6 +7,8 @@ import BakeryDiningRoundedIcon from "@mui/icons-material/BakeryDiningRounded";
 import LocalDrinkRoundedIcon from "@mui/icons-material/LocalDrinkRounded";
 import StarRoundedIcon from "@mui/icons-material/StarRounded";
 import WorkspacePremiumRoundedIcon from "@mui/icons-material/WorkspacePremiumRounded";
+import CakeRoundedIcon from "@mui/icons-material/CakeRounded";
+import LocalCafeRoundedIcon from "@mui/icons-material/LocalCafeRounded";
 import "./ProductCard.css";
 
 //JSX:
@@ -31,6 +33,12 @@ function ProductCard({ item, categoryId }) {
 
       case "bebidas":
         return <LocalDrinkRoundedIcon sx={iconStyles} />;
+
+      case "dulce":
+        return <CakeRoundedIcon sx={iconStyles} />;
+
+      case "cafeteria":
+        return <LocalCafeRoundedIcon sx={iconStyles} />;
 
       default:
         return <RestaurantRoundedIcon sx={iconStyles} />;

@@ -3,25 +3,14 @@ import { Box, Chip } from "@mui/material";
 import "./CategoryNav.css";
 
 //JSX:
-function CategoryNav({ categories }) {
-    const handleClick = (id) => {
-        const section = document.getElementById(id);
-
-        if (section) {
-        section.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-        });
-        }
-    };
-
+function CategoryNav({ groups, onSelectGroup }) {
     return (
         <Box className="category-nav">
-        {categories.map((category) => (
+        {groups.map((group) => (
             <Chip
-            key={category.id}
-            label={category.title}
-            onClick={() => handleClick(category.id)}
+            key={group.id}
+            label={group.title}
+            onClick={() => onSelectGroup(group.id)}
             sx={{
                 flexShrink: 0,
                 height: 38,

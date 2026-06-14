@@ -10,11 +10,11 @@ function MenuSection({ category }) {
         <Box className="section-header">
             <Box>
             <Typography
-                component="h2"
+                component="h3"
                 sx={{
                 fontFamily: "Fraunces, serif",
-                fontSize: "1.75rem",
-                fontWeight: 700,
+                fontSize: "1.45rem",
+                fontWeight: 800,
                 color: "var(--text)",
                 lineHeight: 1.1,
                 }}
@@ -25,8 +25,9 @@ function MenuSection({ category }) {
             <Typography
                 sx={{
                 mt: 0.5,
-                fontSize: "0.95rem",
+                fontSize: "0.92rem",
                 color: "var(--muted-text)",
+                lineHeight: 1.35,
                 }}
             >
                 {category.description}
@@ -36,7 +37,11 @@ function MenuSection({ category }) {
 
         <Box className="products-list">
             {category.items.map((item) => (
-            <ProductCard key={item.id} item={item} categoryId={category.id} />
+            <ProductCard
+                key={item.id}
+                item={item}
+                categoryId={category.iconType || category.id}
+            />
             ))}
         </Box>
         </section>
