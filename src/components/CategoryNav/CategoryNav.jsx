@@ -21,7 +21,7 @@ function CategoryNav({ groups, onSelectGroup }) {
                 color: "var(--primary)",
                 backgroundColor: "var(--surface)",
                 border: "1px solid var(--border)",
-                boxShadow: "0 8px 22px rgba(70, 45, 20, 0.06)",
+                boxShadow: "0 8px 22px rgba(70, 45, 20, 0.09)",                
                 "&:hover": {
                 backgroundColor: "var(--soft)",
                 },
