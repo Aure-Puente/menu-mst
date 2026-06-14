@@ -1,0 +1,17 @@
+    .menu-section {
+    scroll-margin-top: 78px;
+    }
+
+    .section-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding: 0 2px;
+    }
+
+    .products-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    }
